@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="demoModule">
+    <head>
+        <base href="/"/>
+        <script type="text/javascript" src="./Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="./Scripts/angular-route.min.js"></script>
+        <script type="text/javascript" src="./Scripts/module.js"></script>
+        <script type="text/javascript" src="./Scripts/Controllers/MapController.js"></script>
+        <script type="text/javascript" src="./Scripts/Controllers/SettingsController.js"></script>
+        <script type="text/javascript" src="./Scripts/Directives/MapDirective.js"></script>
+        <script type="text/javascript" src="./Scripts/Services/PointsLoader.js"></script>
+        
+        <script src="http://api4.mapy.cz/loader.js"></script>
+        <script>Loader.load()</script>
+
+        <link rel="stylesheet" href="./Content/bootstrap.min.css" />
+        <link rel="stylesheet" href="./Content/Site.css" />
+        <title>Angular JS</title>
+    </head>
+<body data-ng-controller="HomeController">
+
+    <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="./settings">Nastavení značek</a></li>
+                <li><a href="./map">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div ng-view></div>
+        </div>
+</body>
+</html>

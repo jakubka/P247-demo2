@@ -1,0 +1,23 @@
+﻿<form name="form" data-ng-submit="update(points)">
+    <div class="form-group">
+        <label for="numberOfPoints">Počet značek</label>
+        <input type="number" name="numberOfPoints" id="numberOfPoints" min="1" max="200" required class="form-control" data-ng-model="points" />
+    </div>
+   
+    <div data-ng-show="form.numberOfPoints.$invalid">
+        <span ng-show="form.numberOfPoints.$error.required">
+            Povinné pole
+        </span>
+        <span ng-show="form.numberOfPoints.$error.number">
+            Musí to být číslo
+        </span>
+        <span ng-show="form.numberOfPoints.$error.maxlength">
+            Maximálně 200 značek
+        </span>
+        <span ng-show="form.numberOfPoints.$error.max || form.numberOfPoints.$error.min">
+            Hodnota musí být v rozsahu 1 až 200
+        </span>
+    </div>
+
+    <button type="submit" class="btn">Uložit</button>
+</form>

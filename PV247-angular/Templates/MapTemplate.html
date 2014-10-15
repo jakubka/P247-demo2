@@ -1,0 +1,6 @@
+﻿<div class="mapa" data-map-directive data-points="points"></div>
+<button data-ng-click="load()" type="button" class="btn">Načíst nové body</button>
+<button data-ng-click="filter()" type="button" class="btn">Filtrovat body</button>
+<ul data-ng-repeat="point in points">
+    <li>Lon: {{point.Longitude}}, Lat: {{point.Latitude}}</li>
+</ul>
